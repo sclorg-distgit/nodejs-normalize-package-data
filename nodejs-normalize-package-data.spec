@@ -4,7 +4,7 @@
 %{?nodejs_find_provides_and_requires}
 
 Name:           %{?scl_prefix}nodejs-normalize-package-data
-Version:        1.0.3
+Version:        2.3.5
 Release:        1%{?dist}
 Summary:        Normalizes npm/package.json metadata
 BuildArch:      noarch
@@ -19,11 +19,11 @@ BuildRoot:      %{_tmppath}/%{pkg_name}-%{version}-%{release}-root-%(%{__id_u} -
 BuildRequires:  %{?scl_prefix}nodejs-devel
 
 #for tests
-#BuildRequires:  %{?scl_prefix}npm(tap)
-#BuildRequires:  %{?scl_prefix}npm(underscore)
-#BuildRequires:  %{?scl_prefix}npm(async)
-#BuildRequires:  %{?scl_prefix}npm(semver)
-#BuildRequires:  %{?scl_prefix}npm(github-url-from-git)
+#BuildRequires:  %%{?scl_prefix}npm(tap)
+#BuildRequires:  %%{?scl_prefix}npm(underscore)
+#BuildRequires:  %%{?scl_prefix}npm(async)
+#BuildRequires:  %%{?scl_prefix}npm(semver)
+#BuildRequires:  %%{?scl_prefix}npm(github-url-from-git)
 
 %description
 normalize-package-data exports a function that normalizes package metadata. This
@@ -61,6 +61,9 @@ rm -rf %buildroot
 %doc README.md LICENSE AUTHORS
 
 %changelog
+* Mon Nov 30 2015 Tomas Hrcka <thrcka@redhat.com> - 2.3.5-1
+- New upstream release
+
 * Fri Jan 09 2015 Tomas Hrcka <thrcka@redhat.com> - 1.0.3-1
 - New upstream release 1.0.3
 
